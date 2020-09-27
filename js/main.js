@@ -12,9 +12,11 @@ $(document).ready(function () {
   });
 
   // Close mobile menu on wide screens
-  $(window).resize(function () {
-    if (screen.width > 991) {
-      mobileMenu.removeClass("mmenu--visible");
-    }
-  });
+  $(window)
+    .resize(function () {
+      if (screen.width > 991 && $(window).width() > 991) {
+        mobileMenu.removeClass("mmenu--visible");
+      }
+    })
+    .resize();
 });
