@@ -27,13 +27,16 @@
       margin-left: 3rem
       &:first-child
         margin-left: 0
+      &.active
+        .nav__link
+          color: $color-accent
     &__link
       padding: 2rem 0
       transition: color 0.3s ease
       @include text($font-size: 1.6rem, $font-weight: 400, $color: $color-light, $text-transform: capitalize)
-      &.active
-        color: $color-accent
       &:hover
+        color: $color-accent
+      &.active
         color: $color-accent
 
   .dropdown

@@ -45,7 +45,8 @@ $(document).ready(function () {
 
   /*=== Owl Carousel ===*/
   // Slider for intro section
-  $(".intro .owl-carousel").owlCarousel({
+  const introSlider = $(".intro .owl-carousel");
+  introSlider.owlCarousel({
     loop: true,
     dots: true,
     nav: true,
@@ -55,5 +56,57 @@ $(document).ready(function () {
       "<i class='owl-icon fas fa-angle-left'></i>",
       "<i class='owl-icon fas fa-angle-right'></i>",
     ],
+  });
+
+  /*=== AOS Animation ===*/
+  AOS.init();
+
+  /*=== Smooth Scrolling to Anchor ===*/
+  // Select all links with hashes and remove not anchor links
+  $('a[href*="#"]')
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function (event) {
+      // On-page links
+      if (
+        location.pathname.replace(/^\//, "") ==
+          this.pathname.replace(/^\//, "") &&
+        location.hostname == this.hostname
+      ) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length
+          ? target
+          : $("[name=" + this.hash.slice(1) + "]");
+        // Does a scroll target exist?
+        if (target.length) {
+          // Only prevent default if animation is actually gonna happen
+          event.preventDefault();
+          $("html, body").animate(
+            {
+              scrollTop: target.offset().top,
+            },
+            600,
+            function () {
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) {
+                // Checking if the target was focused
+                return false;
+              } else {
+                $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+              }
+            }
+          );
+        }
+      }
+    });
+
+  /*=== ScrollSpy for header navigation ===*/
+  const spyHeaderNav = new Gumshoe(".header__nav .nav__link", {
+    offset: 100,
   });
 });
