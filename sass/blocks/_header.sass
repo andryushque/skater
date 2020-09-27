@@ -1,0 +1,84 @@
+.header
+  padding: 3.5rem 0
+
+  &-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  .logo
+    @include text($font-size: 2rem, $font-weight: 700, $color: $color-accent, $text-transform: uppercase)
+
+  .nav
+    &__list
+      display: flex
+      align-items: center
+    &__item
+      margin-left: 3rem
+      &:first-child
+        margin-left: 0
+    &__link
+      padding: 2rem 0
+      transition: color 0.3s ease
+      @include text($font-size: 1.6rem, $font-weight: 400, $color: $color-light, $text-transform: capitalize)
+      &.active
+        color: $color-accent
+      &:hover
+        color: $color-accent
+
+  .dropdown
+    position: relative
+    &:hover
+      .dropdown
+        &__list
+          &--level1
+            margin-top: 0
+            opacity: 1
+            visibility: visible
+    &__list
+      &--level1
+        position: absolute
+        top: 4rem
+        left: 0
+        z-index: 10
+        width: 16rem
+        margin-top: 2rem
+        opacity: 0
+        visibility: hidden
+        border-top: 2px solid $color-accent
+        background-color: $color-light
+        transition: margin-top 0.3s ease, opacity 0.3s ease, visibility 0.3s ease
+      &--level2
+        position: absolute
+        top: 0
+        left: 16rem
+        z-index: 10
+        width: 16rem
+        opacity: 0
+        visibility: hidden
+        border-top: 2px solid $color-accent
+        background-color: $color-light
+        transition: left 0.3s ease, opacity 0.3s ease, visibility 0.3s ease
+    &__item
+      width: 100%
+      cursor: pointer
+      &--menu
+        position: relative
+        &:hover
+          .dropdown
+            &__list
+              &--level2
+                opacity: 1
+                visibility: visible
+                left: 14rem
+    &__link
+      display: inline-block
+      width: 100%
+      padding: 1rem 2rem
+      transition: background-color 0.3s ease
+      @include text($font-size: 1.6rem, $font-weight: 400, $color: $color-dark, $text-transform: capitalize)
+      &:hover
+        background-color: rgba($color-grey, 0.25)
+    &__icon
+      font-size: 1.4rem
+      margin-left: 0.4rem
