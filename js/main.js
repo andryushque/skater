@@ -12,15 +12,15 @@ $(document).ready(function () {
     mobileMenu.removeClass("mmenu--visible");
   });
 
-  const mobileMmenu1 = $(".mmenu-dropdown1 > .mmenu-dropdown1__link");
-  mobileMmenu1.on("click", function () {
-    mobileMmenu1.toggleClass("active");
+  // Mobile menu dropdown
+  const mobileMenuLevel1 = $(".mmenu-dropdown1 > .mmenu-dropdown1__link");
+  const mobileMenuLevel2 = $(".mmenu-dropdown2 > .mmenu-dropdown2__link");
+  mobileMenuLevel1.on("click", function () {
+    mobileMenuLevel1.toggleClass("active");
     $(".mmenu-dropdown1__list").slideToggle(300);
   });
-
-  const mobileMenu2 = $(".mmenu-dropdown2 > .mmenu-dropdown2__link");
-  mobileMenu2.on("click", function () {
-    mobileMenu2.toggleClass("active");
+  mobileMenuLevel2.on("click", function () {
+    mobileMenuLevel2.toggleClass("active");
     $(".mmenu-dropdown2__list").slideToggle(300);
   });
 
