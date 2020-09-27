@@ -100,7 +100,7 @@
     position: fixed
     top: 0
     right: -25rem
-    z-index: 1000
+    z-index: 1005
     width: 25rem
     height: calc(100vh)
     padding: 2.5rem 2rem
@@ -122,3 +122,42 @@
       @include text($font-size: 1.6rem, $font-weight: 400, $color: $color-dark, $text-transform: capitalize)
       &:hover
         color: $color-accent
+
+    &-dropdown1
+      &__link
+        padding: 0.7rem 0
+        &--open
+          padding: 1rem 2rem
+      &__list
+        padding-left: 3rem
+
+    &-dropdown2
+      &__link
+        padding: 0.4rem 0
+        &--open
+          padding: 0.7rem 0
+      &__list
+        padding-left: 2rem
+
+    &-dropdown1, &-dropdown2
+      &__item
+        background-color: $color-light
+      &__list
+        display: none
+      &__link
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        transition: color 0.3s ease
+        @include text($font-size: 1.6rem, $font-weight: 400, $color: $color-dark, $text-transform: capitalize)
+        &:hover
+          color: $color-accent
+        &.active
+          color: $color-accent
+          .mmenu
+            &-dropdown1, &-dropdown2
+              &__item-icon
+                transform: rotate(180deg)
+      &__item-icon
+        transition: transform 0.3s ease
