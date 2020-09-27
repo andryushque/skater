@@ -33,6 +33,16 @@ $(document).ready(function () {
     })
     .resize();
 
+  // Header size on scroll
+  const header = $(".header");
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 200) {
+      header.addClass("header--scroll");
+    } else {
+      header.removeClass("header--scroll");
+    }
+  });
+
   /*=== Owl Carousel ===*/
   // Slider for intro section
   $(".intro .owl-carousel").owlCarousel({

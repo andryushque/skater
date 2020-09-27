@@ -6,6 +6,10 @@
   z-index: 1000
   width: 100%
   padding: 3.5rem 0
+  background-color: $color-dark
+  transition: padding 0.3s ease
+  &--scroll
+    padding: 2.5rem 0
 
   &-wrapper
     display: flex
@@ -114,6 +118,7 @@
     background-color: $color-light
     text-align: right
     transition: right 0.5s ease, opacity 0.5s ease
+    overflow-y: auto
     &--visible
       right: 0
       opacity: 1

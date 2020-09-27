@@ -1,5 +1,5 @@
 .intro
-  padding-top: 10.4rem
+  padding: 10.4rem 0
   &__item
     position: relative
     display: flex
@@ -11,7 +11,7 @@
     width: 100%
     background-repeat: no-repeat
     background-size: cover
-    background-position: center
+    background-position: center top
     text-align: center
     &--1
       background-image: url(../img/intro/intro-1.jpg)
@@ -35,15 +35,15 @@
 
   &__title
     max-width: 40%
-    margin-bottom: 1rem
+    margin-bottom: 2rem
     @include title($font-size: 7.2rem, $line-height: 1, $color: $color-light)
   &__text
     max-width: 40%
-    margin-bottom: 1rem
+    margin-bottom: 2rem
     @include text($font-size: 1.8rem, $line-height: 1.5, $color: $color-light)
   &__button
+    margin-bottom: 4rem
     @include button()
-
 
   .owl-carousel
     .owl-dots
@@ -60,10 +60,10 @@
         position: relative
         display: block
         width: 1rem
-        height: 1rem
+        height: 0.8rem
         margin: 0 0.5rem
-        border-radius: 0.5rem
-        background-color: rgba($color-light, 0.75)
+        border-radius: 0.4rem
+        background-color: rgba($color-light, 0.5)
         transition: width 0.5s ease, background-color 0.5s ease
         &.active
           width: 2rem
@@ -81,7 +81,7 @@
       padding: 0 2rem
       .owl-icon
         font-size: 2.4rem
-        color: rgba($color-light, 0.75)
+        color: rgba($color-light, 0.5)
         transition: color 0.5s ease
         &:hover
           color: $color-light
