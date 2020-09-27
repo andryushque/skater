@@ -1,17 +1,37 @@
-@mixin title($font-size: 4.8rem, $font-weight: 500, $color: $color-accent, $text-transform: uppercase)
+@mixin title($font-size: 4.8rem, $font-weight: 400, $line-height: 1.2, $color: $color-accent, $text-transform: uppercase)
   font-family: "Oswald"
   font-size: $font-size
   font-weight: $font-weight
   font-style: normal
-  line-height: $font-size * 1.2
+  line-height: $font-size * $line-height
   color: $color
   text-transform: $text-transform
 
-@mixin text($font-size: 1.6rem, $font-weight: 400, $color: $color-grey, $text-transform: none)
+@mixin text($font-size: 1.6rem, $font-weight: 400, $line-height: 1.7, $color: $color-grey, $text-transform: none)
   font-family: "Rubik"
   font-size: $font-size
   font-weight: $font-weight
   font-style: normal
-  line-height: $font-size * 1.7
+  line-height: $font-size * $line-height
   color: $color
   text-transform: $text-transform
+
+@mixin button($font-size: 1.6rem, $font-weight: 400, $line-height: 1.5, $color: $color-light, $text-transform: none)
+  display: inline-block
+  padding: 1rem 2rem
+  text-align: center
+  vertical-align: middle
+  font-family: "Rubik"
+  font-size: $font-size
+  font-weight: $font-weight
+  font-style: normal
+  line-height: $font-size * $line-height
+  color: $color
+  text-transform: $text-transform
+  border-radius: 0.5rem
+  border: 2px solid $color
+  background-color: transparent
+  transition: color 0.5s ease, background-color 0.5s ease
+  &:hover
+    background-color: $color
+    color: $color-dark

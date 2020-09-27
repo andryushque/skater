@@ -1,0 +1,87 @@
+.intro
+  padding-top: 10.4rem
+  &__item
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    min-height: 40rem
+    height: calc(100vh - 20.8rem)
+    width: 100%
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    text-align: center
+    &--1
+      background-image: url(../img/intro/intro-1.jpg)
+    &--2
+      background-image: url(../img/intro/intro-2.jpg)
+    &::after
+      content: ""
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      z-index: 2
+      width: 100%
+      height: 100%
+      background-color: rgba($color-dark, 0.4)
+
+  &__title, &__text, &__button
+    position: relative
+    z-index: 10
+
+  &__title
+    max-width: 40%
+    margin-bottom: 1rem
+    @include title($font-size: 7.2rem, $line-height: 1, $color: $color-light)
+  &__text
+    max-width: 40%
+    margin-bottom: 1rem
+    @include text($font-size: 1.8rem, $line-height: 1.5, $color: $color-light)
+  &__button
+    @include button()
+
+
+  .owl-carousel
+    .owl-dots
+      position: absolute
+      bottom: 4rem
+      margin: 0 auto
+      z-index: 10
+      width: 100%
+      max-width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      .owl-dot
+        position: relative
+        display: block
+        width: 1rem
+        height: 1rem
+        margin: 0 0.5rem
+        border-radius: 0.5rem
+        background-color: rgba($color-light, 0.75)
+        transition: width 0.5s ease, background-color 0.5s ease
+        &.active
+          width: 2rem
+          background-color: $color-light
+
+    .owl-nav
+      position: absolute
+      z-index: 10
+      top: 50%
+      transform: translateY(-50%)
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 0 2rem
+      .owl-icon
+        font-size: 2.4rem
+        color: rgba($color-light, 0.75)
+        transition: color 0.5s ease
+        &:hover
+          color: $color-light

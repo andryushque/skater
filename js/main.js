@@ -32,4 +32,18 @@ $(document).ready(function () {
       }
     })
     .resize();
+
+  /*=== Owl Carousel ===*/
+  // Slider for intro section
+  $(".intro .owl-carousel").owlCarousel({
+    loop: true,
+    dots: true,
+    nav: true,
+    items: 1,
+    smartSpeed: 1200,
+    navText: [
+      "<i class='owl-icon fas fa-angle-left'></i>",
+      "<i class='owl-icon fas fa-angle-right'></i>",
+    ],
+  });
 });
