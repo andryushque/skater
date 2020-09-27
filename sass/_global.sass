@@ -86,3 +86,42 @@ button
   &__icon
     font-size: 2.2rem
     color: $color-light
+
+
+/*=== Preloader ===*/
+.preloder
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  right: 0
+  z-index: 10000
+  background: $color-dark
+
+.loader
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 5rem
+  height: 5rem
+  margin-top: -2.5rem
+  margin-left: -2.5rem
+  border-radius: 50%
+  animation: loader 0.8s linear infinite
+
+@keyframes loader
+  0%
+    transform: rotate(0deg)
+    border: 4px solid $color-accent
+    border-left-color: transparent
+
+  50%
+    transform: rotate(180deg)
+    border: 4px solid $color-light
+    border-left-color: transparent
+
+  100%
+    transform: rotate(360deg)
+    border: 4px solid $color-accent
+    border-left-color: transparent
