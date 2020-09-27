@@ -109,4 +109,18 @@ $(document).ready(function () {
   const spyHeaderNav = new Gumshoe(".header__nav .nav__link", {
     offset: 100,
   });
+
+  /*=== To Top Button ===*/
+  const topButton = $(".top-button");
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 500) {
+      topButton.addClass("show");
+    } else {
+      topButton.removeClass("show");
+    }
+  });
+  topButton.on("click", function (e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, "600");
+  });
 });
