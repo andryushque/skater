@@ -1,0 +1,36 @@
+.information
+  padding: 7rem 0
+  &__block
+    display: flex
+    justify-content: space-between
+    &:first-child
+      margin-bottom: 4rem
+  &__image-wrapper
+    width: 47.5%
+    max-height: 64rem
+  &__image
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &__content
+    width: 47.5%
+    padding: 5rem
+  &__title
+    margin-bottom: 2rem
+    @include title($font-size: 3.2rem)
+  &__text
+    margin-bottom: 1.6rem
+    @include text($font-size: 1.6rem)
+  &__item
+    position: relative
+    margin-bottom: 1.6rem
+    &::before
+      content: "\f00c"
+      font-family: "Font Awesome 5 Free"
+      font-size: 1.8rem
+      display: inline-block
+      padding-right: 1rem
+      font-weight: 900
+      color: $color-accent
+    &-text
+      @include text($font-size: 1.6rem)

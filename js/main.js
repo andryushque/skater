@@ -59,7 +59,12 @@ $(document).ready(function () {
   });
 
   /*=== AOS Animation ===*/
-  AOS.init();
+  AOS.init({
+    disable: function () {
+      var maxWidth = 767;
+      return window.innerWidth < maxWidth;
+    },
+  });
 
   /*=== Smooth Scrolling to Anchor ===*/
   // Select all links with hashes and remove not anchor links
