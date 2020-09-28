@@ -111,10 +111,8 @@ $(document).ready(function () {
     });
 
   /*=== ScrollSpy for header navigation ===*/
-  const spyHeaderNav = new Gumshoe(".header__nav .nav__link", {
+  const spyHeaderNav = new Gumshoe(".link--scrollspy", {
     offset: 100,
-    nested: true,
-    nestedClass: "dropdown__link",
   });
 
   /*=== To Top Button ===*/

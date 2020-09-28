@@ -39,24 +39,34 @@
           <nav class="nav header__nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="#home" class="nav__link link">Home</a>
+                <a href="#home" class="nav__link link link--scrollspy">Home</a>
               </li>
               <li class="nav__item">
-                <a href="#services" class="nav__link link">Services</a>
+                <a href="#services" class="nav__link link link--scrollspy"
+                  >Services</a
+                >
               </li>
               <li class="nav__item dropdown">
-                <a href="#about" class="nav__link link"
+                <a href="#about" class="nav__link link link--scrollspy"
                   >About <i class="dropdown__icon fas fa-angle-down"></i
                 ></a>
                 <ul class="dropdown__list dropdown__list--level1">
                   <li class="dropdown__item">
-                    <a href="#team" class="dropdown__link link">Team</a>
+                    <a href="#team" class="dropdown__link link link--scrollspy"
+                      >Team</a
+                    >
                   </li>
                   <li class="dropdown__item">
-                    <a href="#pricing" class="dropdown__link link">Pricing</a>
+                    <a
+                      href="#pricing"
+                      class="dropdown__link link link--scrollspy"
+                      >Pricing</a
+                    >
                   </li>
                   <li class="dropdown__item">
-                    <a href="#faq" class="dropdown__link link">FAQ</a>
+                    <a href="#faq" class="dropdown__link link link--scrollspy"
+                      >FAQ</a
+                    >
                   </li>
                   <li class="dropdown__item dropdown__item--menu">
                     <a href="#" class="dropdown__link link"
@@ -78,13 +88,15 @@
                 </ul>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link link">Testimonials</a>
+                <a href="#" class="nav__link link link--scrollspy"
+                  >Testimonials</a
+                >
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link link">Blog</a>
+                <a href="#" class="nav__link link link--scrollspy">Blog</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link link">Contact</a>
+                <a href="#" class="nav__link link link--scrollspy">Contact</a>
               </li>
             </ul>
           </nav>
@@ -106,20 +118,22 @@
               </li>
               <li class="mmenu__item mmenu-dropdown1">
                 <a
-                  href="#"
+                  href="#about"
                   class="mmenu-dropdown1__link mmenu-dropdown1__link--open link"
                   >About
                   <i class="mmenu-dropdown1__item-icon fas fa-angle-down"></i>
                 </a>
                 <ul class="mmenu-dropdown1__list">
                   <li class="mmenu-dropdown1__item">
-                    <a href="#" class="mmenu-dropdown1__link link">Team</a>
+                    <a href="#team" class="mmenu-dropdown1__link link">Team</a>
                   </li>
                   <li class="mmenu-dropdown1__item">
-                    <a href="#" class="mmenu-dropdown1__link link">Pricing</a>
+                    <a href="#pricing" class="mmenu-dropdown1__link link"
+                      >Pricing</a
+                    >
                   </li>
                   <li class="mmenu-dropdown1__item">
-                    <a href="#" class="mmenu-dropdown1__link link">FAQ</a>
+                    <a href="#faq" class="mmenu-dropdown1__link link">FAQ</a>
                   </li>
                   <li class="mmenu-dropdown1__item mmenu-dropdown2">
                     <a
@@ -151,13 +165,15 @@
                 </ul>
               </li>
               <li class="mmenu__item">
-                <a href="#" class="mmenu__link link">Testimonials</a>
+                <a href="#testimonials" class="mmenu__link link"
+                  >Testimonials</a
+                >
               </li>
               <li class="mmenu__item">
-                <a href="#" class="mmenu__link link">Blog</a>
+                <a href="#blog" class="mmenu__link link">Blog</a>
               </li>
               <li class="mmenu__item">
-                <a href="#" class="mmenu__link link">Contact</a>
+                <a href="#contact" class="mmenu__link link">Contact</a>
               </li>
             </ul>
           </nav>
@@ -521,6 +537,109 @@
         <!-- /.container -->
       </div>
       <!-- /.about -->
+
+      <a id="team" class="anchor"></a>
+      <section class="team">
+        <div class="container">
+          <div class="team-wrapper">
+            <h2 class="team__title" data-aos="fade-up" data-aos-delay="0">
+              Our Team
+            </h2>
+            <p class="team__text" data-aos="fade-up" data-aos-delay="0">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
+              at delectus laudantium, deserunt, atque eveniet. Voluptatem, fuga
+              quos rerum inventore.
+            </p>
+            <div class="team__cards team-cards">
+              <div
+                class="team-cards__card card"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="card__image-wrapper">
+                  <img
+                    src="img/team/t-1.jpg"
+                    alt="Photo: Jean Smith"
+                    class="card__image"
+                  />
+                </div>
+                <h3 class="card__name">Jean Smith</h3>
+                <span class="card__profession">Skateboard trainer</span>
+                <div class="card__links">
+                  <a href="#" class="card__link link"
+                    ><i class="card__icon fab fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="card__link link"
+                    ><i class="card__icon fab fa-twitter"></i
+                  ></a>
+                  <a href="#" class="card__link link"
+                    ><i class="card__icon fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- /.team-cards__card 1 -->
+              <div
+                class="team-cards__card card"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="card__image-wrapper">
+                  <img
+                    src="img/team/t-2.jpg"
+                    alt="Photo: Bob Carry"
+                    class="card__image"
+                  />
+                </div>
+                <h3 class="card__name">Bob Carry</h3>
+                <span class="card__profession">Skateboard trainer</span>
+                <div class="card__links">
+                  <a href="#" class="card__link link"
+                    ><i class="card__icon fab fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="card__link link"
+                    ><i class="card__icon fab fa-twitter"></i
+                  ></a>
+                  <a href="#" class="card__link link"
+                    ><i class="card__icon fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- /.team-cards__card 2 -->
+              <div
+                class="team-cards__card card"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <div class="card__image-wrapper">
+                  <img
+                    src="img/team/t-3.jpg"
+                    alt="Photo: Ricky Fisher"
+                    class="card__image"
+                  />
+                </div>
+                <h3 class="card__name">Ricky Fisher</h3>
+                <span class="card__profession">Skateboard trainer</span>
+                <div class="card__links">
+                  <a href="#" class="card__link link"
+                    ><i class="card__icon fab fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="card__link link"
+                    ><i class="card__icon fab fa-twitter"></i
+                  ></a>
+                  <a href="#" class="card__link link"
+                    ><i class="card__icon fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- /.team-cards__card 1 -->
+            </div>
+            <!-- /.team__cards team-cards -->
+          </div>
+          <!-- /.team-wrapper -->
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.team -->
     </main>
     <!-- /.main -->
 
