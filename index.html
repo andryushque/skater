@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="fonts/flaticon/flaticon.css" />
     <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -44,18 +45,18 @@
                 <a href="#services" class="nav__link link">Services</a>
               </li>
               <li class="nav__item dropdown">
-                <a href="#" class="nav__link link"
+                <a href="#about" class="nav__link link"
                   >About <i class="dropdown__icon fas fa-angle-down"></i
                 ></a>
                 <ul class="dropdown__list dropdown__list--level1">
                   <li class="dropdown__item">
-                    <a href="#" class="dropdown__link link">Team</a>
+                    <a href="#team" class="dropdown__link link">Team</a>
                   </li>
                   <li class="dropdown__item">
-                    <a href="#" class="dropdown__link link">Pricing</a>
+                    <a href="#pricing" class="dropdown__link link">Pricing</a>
                   </li>
                   <li class="dropdown__item">
-                    <a href="#" class="dropdown__link link">FAQ</a>
+                    <a href="#faq" class="dropdown__link link">FAQ</a>
                   </li>
                   <li class="dropdown__item dropdown__item--menu">
                     <a href="#" class="dropdown__link link"
@@ -450,6 +451,76 @@
         <!-- /.container -->
       </section>
       <!-- /.information -->
+
+      <a id="about" class="anchor"></a>
+      <div class="about">
+        <div class="container">
+          <div class="about-wrapper">
+            <div
+              class="about__video about-video"
+              data-aos="fade-up"
+              data-aos-delay="0"
+            >
+              <img
+                src="img/about/a-1.jpg"
+                alt="Image-1"
+                class="about-video__image"
+              />
+              <a
+                data-fancybox
+                href="https://www.youtube.com/watch?v=ScMzIvxBSi4"
+                class="about-video__link link"
+              >
+                <i class="about-video__icon fas fa-play"></i>
+              </a>
+            </div>
+            <!-- /.about-video -->
+
+            <div class="about__counter about-counter">
+              <div
+                class="about-counter__item"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="about-counter__number">30</div>
+                <h3 class="about-counter__title">Year of Experience</h3>
+              </div>
+              <!-- /.about-counter__item -->
+              <div
+                class="about-counter__item"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="about-counter__number">4</div>
+                <h3 class="about-counter__title">Expert Trainer</h3>
+              </div>
+              <!-- /.about-counter__item -->
+              <div
+                class="about-counter__item"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <div class="about-counter__number">4</div>
+                <h3 class="about-counter__title">Number of Trainer</h3>
+              </div>
+              <!-- /.about-counter__item -->
+              <div
+                class="about-counter__item"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <div class="about-counter__number">1500</div>
+                <h3 class="about-counter__title">Number of Members</h3>
+              </div>
+              <!-- /.about-counter__item -->
+            </div>
+            <!-- /.about-counter -->
+          </div>
+          <!-- /.about-wrapper -->
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.about -->
     </main>
     <!-- /.main -->
 
@@ -466,6 +537,7 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/gumshoe.polyfills.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -113,6 +113,8 @@ $(document).ready(function () {
   /*=== ScrollSpy for header navigation ===*/
   const spyHeaderNav = new Gumshoe(".header__nav .nav__link", {
     offset: 100,
+    nested: true,
+    nestedClass: "dropdown__link",
   });
 
   /*=== To Top Button ===*/
@@ -133,5 +135,25 @@ $(document).ready(function () {
   $(window).on("load", function () {
     $(".loader").fadeOut();
     $(".preloder").delay(200).fadeOut("slow");
+  });
+
+  /*=== Counter ===*/
+  // animation to counter numbers (from 0)
+  const counterNumber = $(".about-counter__number");
+  counterNumber.each(function () {
+    $(this)
+      .prop("counter", 0)
+      .animate(
+        {
+          counter: $(this).text(),
+        },
+        {
+          duration: 7500,
+          easing: "swing",
+          step: function (now) {
+            $(this).text(Math.ceil(now));
+          },
+        }
+      );
   });
 });
