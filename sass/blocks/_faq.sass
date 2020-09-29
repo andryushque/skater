@@ -1,0 +1,20 @@
+.faq
+  padding: 7rem 0
+  &__title
+    margin-bottom: 10rem
+    text-align: center
+    @include title()
+  &-cards
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &__card
+      margin-bottom: 4rem
+    .card
+      width: 50%
+      padding-right: 3rem
+      &__title
+        margin-bottom: 2rem
+        @include title($font-size: 2.4rem, $line-height: 1)
+      &__text
+        @include text()
