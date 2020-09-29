@@ -57,6 +57,27 @@ $(document).ready(function () {
       "<i class='owl-icon fas fa-angle-right'></i>",
     ],
   });
+  // Slider for testimonials section
+  const testimonialsSlider = $(".testimonials .owl-carousel");
+  testimonialsSlider.owlCarousel({
+    loop: true,
+    dots: true,
+    dotsEach: true,
+    nav: false,
+    items: 3,
+    smartSpeed: 1200,
+    responsive: {
+      992: {
+        items: 3,
+      },
+      768: {
+        items: 2,
+      },
+      320: {
+        items: 1,
+      },
+    },
+  });
 
   /*=== AOS Animation ===*/
   AOS.init({
