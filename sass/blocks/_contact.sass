@@ -1,0 +1,67 @@
+.contact
+  padding: 7rem 0
+  &__suptitle
+    display: block
+    margin-bottom: 1rem
+    text-align: center
+    @include text($font-size: 1.4rem, $font-weight: 700, $line-height: 1, $text-transform: uppercase)
+  &__title
+    margin-bottom: 6rem
+    text-align: center
+    @include title()
+
+  &-inner
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__form
+    width: 50%
+  &__info
+    width: 50%
+    padding-left: 4rem
+
+
+  .form
+    text-align: right
+    &__fieldset
+      display: flex
+      justify-content: space-between
+      width: 100%
+      .form
+        &__input
+          width: 48%
+    &__input, &__textarea
+      width: 100%
+      height: 5rem
+      margin-bottom: 2rem
+      outline: none
+      border: 1px solid rgba($color-light, 0.2)
+      padding: 0 2rem
+      background-color: transparent
+      font: normal 400 1.6rem/5rem "Rubik"
+      color: $color-grey
+      &:focus
+        outline: 1px solid $color-accent
+    &__textarea
+      resize: none
+      height: 25rem
+      padding-top: 1rem
+      line-height: 1.25
+    &:invalid
+      .form
+        &__input, &__textarea
+          box-shadow: none
+        &__button
+          cursor: not-allowed
+          pointer-events: none
+    &__button
+      @include button-solid($px: 5rem, $py: 1.5rem)
+
+  &__info-title
+    margin-bottom: 1rem
+    @include title($font-size: 3.2rem)
+  &__info-text
+    margin-bottom: 2rem
+    @include text()
+  &__info-button
+    @include button-solid()
