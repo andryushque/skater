@@ -1,0 +1,104 @@
+.footer
+  padding: 12rem 0
+  background-color: #333
+
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding-bottom: 4rem
+
+  &__item
+    &:nth-child(1)
+      width: 35%
+    &:nth-child(2)
+      width: 20%
+    &:nth-child(3)
+      width: 40%
+  &__title
+    margin-bottom: 3rem
+    @include title($font-size: 1.8rem)
+  &__text
+    @include text()
+  &__listitem
+    margin-bottom: 1.6rem
+  &__link
+    transition: color 0.3s ease
+    @include text($line-height: 1)
+    &:hover
+      color: $color-light
+
+  &__form
+    margin-bottom: 4rem
+  .form
+    position: relative
+    &__input
+      width: 100%
+      height: 5rem
+      outline: none
+      border: 1px solid rgba($color-light, 0.2)
+      padding: 0 12rem 0 2rem
+      background-color: transparent
+      font: normal 400 1.6rem/5rem "Rubik"
+      color: $color-grey
+      &:focus
+        outline: 1px solid $color-accent
+    &:invalid
+      .form
+        &__input
+          box-shadow: none
+        &__button
+          cursor: not-allowed
+          pointer-events: none
+    &__button
+      position: absolute
+      right: 0
+      top: 0
+      bottom: 0
+      padding: 0 2rem
+      font: normal 400 1.6rem/5rem "Rubik"
+      color: $color-light
+      border: 2px solid $color-accent
+      background-color: $color-accent
+      transition: color 0.5s ease, background-color 0.5s ease
+      &:hover
+        background-color: rgba($color-accent, 0.5)
+
+  &__social
+    &-links
+      display: flex
+      align-items: center
+    &-link
+      display: inline-block
+      margin-right: 2rem
+      font-size: 1.6rem
+      color: $color-light
+      transition: color 0.3s ease
+      &:hover
+        color: $color-accent
+
+  &-copyright
+    padding-top: 4rem
+    border-top: 1px solid rgba($color-light, 0.5)
+    &__content
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center
+      @include text($font-size: 1.4rem, $line-height: 1, $color: $color-light)
+    &__text
+      &:first-child
+        position: relative
+        margin-right: 2rem
+        &::after
+          content: "|"
+          position: absolute
+          top: 0
+          right: -1.2rem
+    &__icon
+      color: $color-accent
+    &__link
+      color: $color-accent
+      transition: color 0.3s ease
+      &:hover
+        color: $color-light
