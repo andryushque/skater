@@ -12,6 +12,7 @@ $contactFirstName = $_POST['contact-first-name'];
 $contactLastName = $_POST['contact-last-name'];
 $contactEmail = $_POST['contact-email'];
 $contactMessage = $_POST['contact-message'];
+$newsletterEmail = $_POST['newsletter-email'];
 
 // Формирование самого письма для формы contact
 if ($form == 'contact-form') {
@@ -22,6 +23,15 @@ if ($form == 'contact-form') {
   <b>Last name:</b> $contactLastName<br>
   <b>Email:</b> $contactEmail<br>
   <b>Message:</b> $contactMessage<br>
+  ";
+};
+
+// Формирование самого письма для формы newsletter
+if ($form == 'newsletter-form') {
+  $title = "Подписка на рассылку на сайте Skater";
+  $body = "
+  <h3>Новая подписка</h3>
+  <b>Email:</b> $newsletterEmail<br>
   ";
 };
 
@@ -62,6 +72,9 @@ else {$result = "error";}
 // Отображение результата
 if ($form == 'contact-form') {
   header('Location: phpmailer-contact.html');
+};
+if ($form == 'newsletter-form') {
+  header('Location: phpmailer-newsletter.html');
 };
 
 //echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
