@@ -1,0 +1,41 @@
+.post-intro
+  padding: 10.4rem 0
+  &__wrapper
+    position: relative
+    height: 30rem
+    background-image: url(../img/post/p-1.jpg)
+    background-position: center center
+    background-size: cover
+    background-repeat: no-repeat
+    flex-direction: column
+    @include flex-center()
+    &::after
+      content: ""
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      z-index: 2
+      width: 100%
+      height: 100%
+      background-color: rgba($color-dark, 0.4)
+  &__info
+    position: relative
+    z-index: 10
+    @include text($font-size: 1.4rem, $line-height: 1.25, $color: $color-light, $text-transform: uppercase)
+  &__date
+    position: relative
+    display: inline-block
+    margin-right: 3rem
+    &::after
+      content: "\00B7"
+      position: absolute
+      top: 0
+      right: -1.8rem
+      color: $color-accent
+  &__title
+    position: relative
+    z-index: 10
+    text-align: center
+    @include title($font-size: 7.2rem, $color: $color-light)
