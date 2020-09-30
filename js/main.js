@@ -13,8 +13,8 @@ $(document).ready(function () {
   });
 
   // Mobile menu dropdown
-  const mobileMenuLevel1 = $(".mmenu-dropdown1 > .mmenu-dropdown1__link");
-  const mobileMenuLevel2 = $(".mmenu-dropdown2 > .mmenu-dropdown2__link");
+  const mobileMenuLevel1 = $(".mmenu-dropdown1__item-button");
+  const mobileMenuLevel2 = $(".mmenu-dropdown2__item-button");
   mobileMenuLevel1.on("click", function () {
     mobileMenuLevel1.toggleClass("active");
     $(".mmenu-dropdown1__list").slideToggle(300);
