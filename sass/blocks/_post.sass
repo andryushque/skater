@@ -39,3 +39,152 @@
     z-index: 10
     text-align: center
     @include title($font-size: 7.2rem, $color: $color-light)
+
+
+.post
+  padding-bottom: 10.4rem
+  &-wrapper
+    display: flex
+    justify-content: space-between
+  &__content
+    width: 67%
+    margin-right: 3rem
+  &__sidebar
+    width: 33%
+  &__text
+    margin-bottom: 1.6rem
+    @include text()
+  &__info
+    margin: 5rem 0
+  &-info
+    display: flex
+    &__item
+      margin-right: 2rem
+      @include text()
+    &__link
+      position: relative
+      display: inline-block
+      margin-right: 0.5rem
+      color: $color-accent
+      transition: color 0.3s ease
+      &:hover
+        color: $color-light
+      &::after
+        content: ","
+        position: absolute
+        bottom: 0
+        right: -0.5rem
+        color: $color-grey
+      &:last-child
+        &::after
+          display: none
+
+  &__section-title
+    margin-bottom: 5rem
+    @include title($font-size: 2.8rem, $color: $color-grey)
+
+  .comments
+    &__item
+      margin-bottom: 5rem
+      &--level1
+        margin-left: 6rem
+      &--level2
+        margin-left: 12rem
+    .comment
+      display: flex
+      &__photo-wrapper
+        margin-right: 3rem
+        width: 6rem
+        min-width: 6rem
+        height: 6rem
+      &__photo
+        width: 100%
+        height: 100%
+        object-fit: cover
+        border-radius: 50%
+      &__name
+        margin-bottom: 1rem
+        @include title($font-size: 2rem, $color: $color-light)
+      &__time
+        display: inline-block
+        margin-bottom: 1rem
+        @include text($font-size: 1.3rem, $line-height: 1.2, $color: rgba($color-light, 0.75), $text-transform: uppercase)
+      &__text
+        margin-bottom: 2rem
+        @include text()
+      &__button
+        @include button-solid($px: 1rem, $py: 0, $font-size: 1.4rem, $line-height: 1.75, $bg-color: $color-light, $color: $color-dark, $border-radius: 0, $text-transform: uppercase)
+
+  .form
+    &__label
+      display: inline-block
+      margin-bottom: 1rem
+      @include text()
+    &__input, &__textarea
+      width: 100%
+      height: 5rem
+      margin-bottom: 2rem
+      outline: none
+      border: 1px solid rgba($color-light, 0.2)
+      padding: 0 2rem
+      background-color: transparent
+      font: normal 400 1.6rem/5rem "Rubik"
+      color: $color-grey
+      &:focus
+        outline: 1px solid $color-accent
+    &__textarea
+      resize: none
+      height: 25rem
+      padding-top: 1rem
+      line-height: 1.25
+    &:invalid
+      .form
+        &__input, &__textarea
+          box-shadow: none
+        &__button
+          cursor: not-allowed
+          pointer-events: none
+    &__button
+      @include button-solid($px: 3rem, $py: 1rem)
+
+  .sidebar
+    &__block
+      margin-bottom: 3rem
+      padding: 2.5rem
+      background-color: #333
+      &-title
+        margin-bottom: 2rem
+        @include title($font-size: 1.8rem, $color: $color-light)
+    &__listitem
+      margin-bottom: 1rem
+      padding-bottom: 1rem
+      border-bottom: 1px dotted $color-grey
+      &:last-child
+        margin-bottom: 0
+        border-bottom: none
+    &__link
+      display: flex
+      align-items: center
+      justify-content: space-between
+      transition: color 0.3s ease
+      @include text($font-size: 1.5rem, $line-height: 1, $color: $color-accent, $text-transform: capitalize)
+      &-number
+        color: $color-grey
+        transition: color 0.3s ease
+      &:hover
+        color: $color-light
+
+    &__photo-wrapper
+      margin-bottom: 2rem
+      width: 12rem
+      height: 12rem
+    &__photo
+      width: 100%
+      height: 100%
+      object-fit: cover
+      border-radius: 50%
+    &__text
+      margin-bottom: 2rem
+      @include text()
+    &__button
+      @include button-solid($px: 2rem, $py: 0.8rem)
